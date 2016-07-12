@@ -1,1 +1,30 @@
 /*more specific styling here*/
+
+/*.menu {
+  display:
+}*/
+
+.nav-bar ul {
+  display: none;
+  padding: 0;
+  list-style: none;
+}
+
+@media only screen and (min-width:600px) {
+  /*.menu {
+
+  }*/
+  .nav-bar ul {
+    display: block;
+    margin: 10px 0px;
+  }
+  .nav-bar ul li {
+    display: inline;
+    margin-left: 30px;
+  }
+  .nav-bar ul li a {
+    padding: 5px 25px;
+    border-radius: 4px;
+    background-color: #F0CF2C;
+  }
+}

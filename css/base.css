@@ -1,3 +1,29 @@
-* {
+/** {
   outline: 1px dotted orange;
+}*/
+
+header {
+  background-color: #6887F2;
+  padding: 10px 0px;
+}
+
+h1 {
+  font-family: 'Bangers', cursive;
+  font-size: 3em;
+  color: #111;
+}
+
+h2 {
+  font-family: 'Bangers', cursive;
+  font-size: 1.5em;
+}
+
+li {
+  font-family: 'Bangers', cursive;
+  font-size: 1.5em;
+}
+
+a {
+  text-decoration: none;
+  color: #111;
 }
