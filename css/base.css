@@ -1,13 +1,31 @@
-/** {
+* {
   outline: 1px dotted orange;
-}*/
+}
 
 header {
+  float: left;
+  width: 960px;
+  max-width: 100%;
+  margin: 0px auto;
+  background-color: #6887F2;
+  padding: 10px 0px;
+}
+
+main {
+  width: 960px;
+  max-width: 100%;
+}
+
+footer {
+  width: 960px;
+  max-width: 100%;
+  margin: 0px auto;
   background-color: #6887F2;
   padding: 10px 0px;
 }
 
 h1 {
+  margin-bottom: 20px;
   font-family: 'Bangers', cursive;
   font-size: 3em;
   color: #111;
@@ -18,9 +36,14 @@ h2 {
   font-size: 1.5em;
 }
 
-li {
-  font-family: 'Bangers', cursive;
-  font-size: 1.5em;
+img {
+  max-width: 100%;
+}
+
+p {
+  width: 780px;
+  max-width: 100%;
+  padding: 10px
 }
 
 a {

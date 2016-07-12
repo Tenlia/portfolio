@@ -1,30 +1,52 @@
 /*more specific styling here*/
 
-/*.menu {
-  display:
-}*/
+.menu {
+  display: block;
+}
+
+.icon-block-menu {
+  float: right;
+  font-size: 2em;
+}
 
 .nav-bar ul {
   display: none;
   padding: 0;
   list-style: none;
+  clear: both;
 }
 
-@media only screen and (min-width:600px) {
-  /*.menu {
+.nav-bar ul li a {
+  background-color: #F0CF2C;
+  border-radius: 4px;
+}
 
-  }*/
+.nav-bar:hover ul {
+  display: block;
+}
+
+.nav-bar ul li a span {
+  font-family: 'Bangers', cursive;
+}
+@media only screen and (max-width:600px) {
+  .nav-bar:hover ul li {
+    background-color: #F0CF2C;
+    padding: 10px 0px;
+  }
+}
+@media only screen and (min-width:600px) {
+  .icon-block-menu {
+    display: none;
+  }
   .nav-bar ul {
-    display: block;
-    margin: 10px 0px;
+    display: inline;
+    color: #111;
   }
   .nav-bar ul li {
     display: inline;
     margin-left: 30px;
   }
   .nav-bar ul li a {
-    padding: 5px 25px;
-    border-radius: 4px;
-    background-color: #F0CF2C;
+    padding: 10px 25px;
   }
 }
