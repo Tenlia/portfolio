@@ -1,9 +1,8 @@
 * {
-  outline: 1px dotted orange;
+  /*outline: 1px dotted orange;*/
 }
 
 header {
-  float: left;
   width: 960px;
   max-width: 100%;
   margin: 0px auto;
@@ -14,9 +13,11 @@ header {
 main {
   width: 960px;
   max-width: 100%;
+  margin: 20px auto;
 }
 
 footer {
+  clear: both;
   width: 960px;
   max-width: 100%;
   margin: 0px auto;
@@ -25,7 +26,7 @@ footer {
 }
 
 h1 {
-  margin-bottom: 20px;
+  margin: 0px 0px 20px 10px;
   font-family: 'Bangers', cursive;
   font-size: 3em;
   color: #111;
@@ -40,11 +41,11 @@ img {
   max-width: 100%;
 }
 
-p {
-  width: 780px;
+/*p {
+  width: 680px;
   max-width: 100%;
   padding: 10px
-}
+}*/
 
 a {
   text-decoration: none;
