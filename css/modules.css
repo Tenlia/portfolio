@@ -20,10 +20,9 @@
 
 .nav-bar ul li a {
   background-color: #F0CF2C;
-  border-radius: 4px;
 }
 
-.nav-bar:hover ul {
+.nav-bar div:hover ul {
   display: block;
 }
 
@@ -33,7 +32,11 @@
 
 .about-me h2 {
   display: inline;
-  margin: 0px auto;
+  margin: 5px 25%;
+}
+
+.about-me p {
+  padding: 5px;
 }
 
 @media only screen and (max-width:650px) {
@@ -47,6 +50,7 @@
     color: #F0CF2C;
   }
 }
+
 @media only screen and (min-width:650px) {
   .icon-block-menu {
     display: none;
@@ -63,5 +67,6 @@
   }
   .nav-bar ul li a {
     padding: 10px 25px;
+    border-radius: 4px;
   }
 }
