@@ -1,5 +1,10 @@
 # portfolio
 
+Header/Footer background-color: #6887F2;
+Menu button background-color: #F0CF2C;
+basic font color: #111;
+
+
 Fonts from Google Fonts: https://fonts.google.com/
 
 Permanent Marker font by Font Diner : https://fonts.google.com/specimen/Permanent+Marker

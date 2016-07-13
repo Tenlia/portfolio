@@ -19,7 +19,7 @@
 }
 
 .nav-bar ul li a {
-  background-color: #F0CF2C;
+  background-color: #FFD400;
 }
 
 .nav-bar:hover ul {
@@ -35,6 +35,18 @@
   color: #111;
 }
 
+.blog_entry a {
+  color: #FFD400;
+  background-color: #111;
+  padding: 10px 15px;
+  border-radius: 4px;
+}
+
+.blog_entry a span {
+  font-family: 'Oswald', sans-serif;
+  color: #FFD400;
+}
+
 .about-me h2 {
   display: inline;
   margin: 15px 15%;
@@ -47,12 +59,12 @@
 @media only screen and (max-width:650px) {
   .nav-bar:hover ul li a {
     display: block;
-    background-color: #F0CF2C;
+    background-color: #FFD400;
     padding: 10px 0px;
   }
   .nav-bar:hover ul li a:hover {
     background-color: #eee;
-    color: #F0CF2C;
+    color: #FFD400;
   }
 }
 
@@ -71,7 +83,7 @@
     margin-left: 30px;
   }
   .nav-bar ul li a {
-    padding: 10px 25px;
+    padding: 10px 15px;
     border-radius: 4px;
   }
 }
