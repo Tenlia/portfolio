@@ -22,7 +22,7 @@
   background-color: #F0CF2C;
 }
 
-.nav-bar div:hover ul {
+.nav-bar:hover ul {
   display: block;
 }
 
@@ -32,11 +32,11 @@
 
 .about-me h2 {
   display: inline;
-  margin: 5px 25%;
+  margin: 15px 15%;
 }
 
 .about-me p {
-  padding: 5px;
+  padding: 15px;
 }
 
 @media only screen and (max-width:650px) {

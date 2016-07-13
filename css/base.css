@@ -41,13 +41,18 @@ img {
   max-width: 100%;
 }
 
-/*p {
-  width: 680px;
-  max-width: 100%;
-  padding: 10px
-}*/
-
 a {
   text-decoration: none;
   color: #111;
+}
+
+title {
+  display: block;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1.5em;
+  margin: 5px auto;
+}
+
+.template {
+  display: none;
 }
