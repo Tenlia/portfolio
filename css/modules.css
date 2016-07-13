@@ -30,6 +30,11 @@
   font-family: 'Bangers', cursive;
 }
 
+.blog_entry {
+  line-height: 1.25em;
+  color: #111;
+}
+
 .about-me h2 {
   display: inline;
   margin: 15px 15%;

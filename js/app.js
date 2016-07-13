@@ -13,7 +13,7 @@ Entry.prototype.toHtml = function() {
   var $newEntry = $('article.template').clone();
   $newEntry.find('title').text(this.title);
   $newEntry.find('.authors').text(this.authors);
-  $newEntry.find('a[href]').html(this.link);
+  $newEntry.find('.repo').attr('href', this.link);
   $newEntry.find('.about').text(this.about);
 
   $newEntry.removeClass('template').addClass('blog_entry');
