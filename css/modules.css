@@ -1,0 +1,72 @@
+/*more specific styling here*/
+
+.menu {
+  display: block;
+}
+
+.icon-block-menu {
+  font-size: 2em;
+  position: relative;
+  bottom: 5px;
+  left: 5px;
+}
+
+.nav-bar ul {
+  display: none;
+  padding: 0;
+  list-style: none;
+  clear: both;
+}
+
+.nav-bar ul li a {
+  background-color: #F0CF2C;
+}
+
+.nav-bar div:hover ul {
+  display: block;
+}
+
+.nav-bar ul li a span {
+  font-family: 'Bangers', cursive;
+}
+
+.about-me h2 {
+  display: inline;
+  margin: 5px 25%;
+}
+
+.about-me p {
+  padding: 5px;
+}
+
+@media only screen and (max-width:650px) {
+  .nav-bar:hover ul li a {
+    display: block;
+    background-color: #F0CF2C;
+    padding: 10px 0px;
+  }
+  .nav-bar:hover ul li a:hover {
+    background-color: #eee;
+    color: #F0CF2C;
+  }
+}
+
+@media only screen and (min-width:650px) {
+  .icon-block-menu {
+    display: none;
+  }
+  .nav-bar ul {
+    position: relative;
+    bottom: 5px;
+    display: inline;
+    color: #111;
+  }
+  .nav-bar ul li {
+    display: inline;
+    margin-left: 30px;
+  }
+  .nav-bar ul li a {
+    padding: 10px 25px;
+    border-radius: 4px;
+  }
+}
