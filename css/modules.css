@@ -47,12 +47,12 @@
   color: #FFD400;
 }
 
-.about-me h2 {
+#about-me h2 {
   display: inline;
   margin: 15px 15%;
 }
 
-.about-me p {
+#about-me p {
   padding: 15px;
 }
 

@@ -1,7 +1,7 @@
 var ourArticles = [
   {
     title: 'Lushootseed',
-    authors: 'Alison Zerbe, Aziza Houni, Derek Hewitt, Elizabeth Kleinschmidt',
+    authors: ['Alison Zerbe', 'Aziza Houni', 'Derek Hewitt', 'Elizabeth Kleinschmidt'],
     pubDate: '2016-07-01',
     lastUpdate: '2016-07-13',
     link: 'https://github.com/AlisonZ/lushootseed',
@@ -9,7 +9,7 @@ var ourArticles = [
   },
   {
     title: 'Bus Mall',
-    authors: 'Elizabeth Kleinschmidt',
+    authors: ['Elizabeth Kleinschmidt'],
     pubDate: '2016-06-26',
     lastUpdate: '2016-07-04',
     link: 'https://github.com/Tenlia/bus-mall',
@@ -17,7 +17,7 @@ var ourArticles = [
   },
   {
     title: 'Salmon Cookies',
-    authors: 'Elizabeth Kleinschmidt, Dylan Holmes',
+    authors: ['Elizabeth Kleinschmidt', 'Dylan Holmes'],
     pubDate: '2016-06-20',
     lastUpdate: '2016-06-27',
     link: 'https://github.com/Tenlia/cookie_stand',
@@ -25,7 +25,7 @@ var ourArticles = [
   },
   {
     title: 'About Me',
-    authors: 'Elizabeth Kleinschmidt, Alison Zerbe',
+    authors: ['Elizabeth Kleinschmidt', 'Alison Zerbe'],
     pubDate: '2016-06-14',
     lastUpdate: '2016-06-22',
     link: 'https://github.com/Tenlia/about_me',

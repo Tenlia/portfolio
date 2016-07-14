@@ -16,8 +16,8 @@
       <nav class="nav-bar">
         <div class="icon-block-menu"></div>
         <ul>
-          <li><a href="index.html" class="icon-idea"><span>Home</span></a></li>
-          <li><a href="#" class="icon-user"><span>About Me</span></a></li>
+          <li><a href="index.html" id="home-tab" class="icon-idea"><span>Home</span></a></li>
+          <li><a href="#" id="about-tab" class="icon-user"><span>About Me</span></a></li>
           <li><a href="https://github.com/Tenlia" class="icon-social-github"><span>GitHub</span></a></li>
           <li><a href="https://twitter.com/MizTenlia" class="icon-social-twitter"><span>Twitter</span></a></li>
           <li><a href="https://www.pinterest.com/tempres/" class="icon-social-pinterest"><span>Pinterest</span></a></li>
@@ -26,19 +26,26 @@
     </header>
     <main>
       <section id="articles">
+        <ul id="filters">
+          <li>
+            <select id="authors-filter">
+              <option value="">Whose Projects would you like to see?</option>
+            </select>
+          </li>
+        </ul>
         <article class="template">
           <img src="">
           <title></title>
           Project Authors: <h3 class="authors"></h3>
           <div class="times">
-            Published: <time pubdate datetime="2000-01-01" class="pub_date"></time>
+            Published: <time pubdate datetime="2000-01-01" class="pub-date"></time>
             Last Updated: <time update datetime="2000-01-01" class="update"></time>
           </div>
           <a href="" class="repo, icon-social-github"><span>Github Project Repo</span></a>
           <p class="about"></p>
         </article>
       </section>
-      <section class="about-me">
+      <section id="about-me">
         <h2>About Elizabeth</h2>
         <p>Tacos ennui pitchfork fashion axe. Shabby chic ramps gluten-free, bushwick portland 3 wolf moon brooklyn flexitarian chicharrones food truck blog dreamcatcher franzen quinoa echo park. Slow-carb paleo hella, ennui narwhal banjo normcore craft beer squid polaroid gluten-free literally mustache. Beard tilde retro paleo, XOXO DIY scenester art party tattooed yr brooklyn. Etsy venmo brooklyn waistcoat pitchfork heirloom leggings, vegan aesthetic fap. Post-ironic iPhone shoreditch green juice drinking vinegar tattooed. Beard hashtag try-hard tacos, tumblr dreamcatcher chartreuse microdosing fixie. Knausgaard craft beer asymmetrical, normcore readymade blog narwhal quinoa iPhone plaid dreamcatcher. Meggings pinterest 3 wolf moon post-ironic. Venmo tofu narwhal, gochujang knausgaard asymmetrical fashion axe man braid paleo. Photo booth portland leggings, gluten-free man braid next level aesthetic food truck. Thundercats lomo occupy forage, green juice echo park flannel you probably haven't heard of them. Sriracha disrupt viral chicharrones, next level skateboard ugh. Chia pug schlitz microdosing, irony tumblr post-ironic franzen. Salvia polaroid ennui microdosing chicharrones banh mi. Polaroid chambray you probably haven't heard of them, pinterest man bun swag messenger bag humblebrag fap austin. Flexitarian art party lomo knausgaard, cliche helvetica hammock. Thundercats artisan yr farm-to-table cardigan. Dreamcatcher pour-over banh mi forage. Marfa seitan tumblr, banh mi post-ironic salvia locavore plaid synth chia. Vegan echo park fashion axe, mumblecore tattooed gastropub thundercats keytar bushwick sriracha banh mi farm-to-table YOLO PBR+B. Organic crucifix wayfarers, post-ironic tacos ugh iPhone. Kinfolk listicle cornhole, asymmetrical flannel godard mixtape organic meggings direct trade polaroid. Raw denim tacos pinterest, pug banh mi forage direct trade quinoa kinfolk paleo pop-up celiac dreamcatcher. Listicle selvage tofu, drinking vinegar microdosing austin tumblr mlkshk everyday carry normcore neutra chicharrones affogato. Gochujang vegan forage, shoreditch put a bird on it tousled occupy narwhal bushwick kale chips keytar bicycle rights viral offal. Helvetica vegan pitchfork, sartorial freegan bicycle rights fashion axe 90's offal gentrify hammock shoreditch cornhole. Jean shorts neutra single-origin coffee 8-bit, four dollar toast street art lomo plaid yr man braid bushwick paleo. Fingerstache health goth you probably haven't heard of them mustache vice. You probably haven't heard of them trust fund fashion axe thundercats selvage. Everyday carry cold-pressed VHS twee typewriter. Kinfolk fingerstache street art mixtape etsy austin, shabby chic cold-pressed VHS. Cardigan chambray ramps, sustainable fanny pack kickstarter shabby chic waistcoat kombucha pop-up banjo twee farm-to-table brunch whatever. Whatever pinterest pitchfork, kombucha wayfarers semiotics try-hard cliche 8-bit health goth banh mi. Cronut cardigan portland, pop-up art party PBR+B drinking vinegar stumptown messenger bag single-origin coffee four dollar toast tattooed quinoa scenester.</p>
       </section>
@@ -48,6 +55,7 @@
     </footer>
     <script src="http://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
     <script src="js/articles.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/make_articles.js"></script>
+    <script src="js/view_sorting.js"></script>
   </body>
 </html>

@@ -1,6 +1,6 @@
 /*more styling here*/
 
-.about-me {
+#about-me {
   display: none;
 }
 
@@ -20,7 +20,7 @@
 }
 
 @media only screen and (min-width: 1000px) {
-  .about-me {
+  #about-me {
     display: inline;
     width: 250px;
     float: right;
