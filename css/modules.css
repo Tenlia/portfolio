@@ -66,6 +66,11 @@
     background-color: #eee;
     color: #FFD400;
   }
+
+  .nav-bar:hover ul li a:hover span {
+    color: #FFD400;
+  }
+
 }
 
 @media only screen and (min-width:650px) {
