@@ -4,6 +4,7 @@ Header/Footer background-color: #6887F2;
 Menu button background-color: #F0CF2C;
 basic font color: #111;
 
+Hipsum filler from http://hipsum.co/
 
 Fonts from Google Fonts: https://fonts.google.com/
 

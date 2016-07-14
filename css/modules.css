@@ -57,6 +57,7 @@
 }
 
 @media only screen and (max-width:650px) {
+
   .nav-bar:hover ul li a {
     display: block;
     background-color: #FFD400;
@@ -71,24 +72,38 @@
     color: #FFD400;
   }
 
+  .icon-block-menu {
+    max-width: 95%;
+  }
+
 }
 
 @media only screen and (min-width:650px) {
+
   .icon-block-menu {
     display: none;
   }
+
   .nav-bar ul {
     position: relative;
     bottom: 5px;
     display: inline;
     color: #111;
   }
-  .nav-bar ul li {
-    display: inline;
-    margin-left: 30px;
-  }
+    .nav-bar ul li {
+      display: inline;
+    }
+
   .nav-bar ul li a {
     padding: 10px 15px;
     border-radius: 4px;
+  }
+
+  .icon-social-github, .icon-social-twitter, .icon-social-pinterest {
+    margin-left: 30px;
+  }
+
+  .icon-idea, .icon-user {
+    display: none;
   }
 }
