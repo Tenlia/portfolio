@@ -24,7 +24,6 @@ Entry.prototype.toHtml = function() {
   $newEntry.find('time.pub_date').html('about ' + parseInt((new Date() - new Date(this.pubDate))/60/60/24/1000) + ' days ago');
   $newEntry.find('time[update]').attr('title', this.lastUpdate);
   $newEntry.find('time.update').html('about ' + parseInt((new Date() - new Date(this.lastUpdate))/60/60/24/1000) + ' days ago');
-  console.log($newEntry);
   return($newEntry);
 };
 

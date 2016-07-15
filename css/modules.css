@@ -80,6 +80,18 @@
 
 @media only screen and (min-width:650px) {
 
+  /*#article {
+    display: inline;
+  }*/
+
+  #about-me {
+    display: inline;
+    width: 250px;
+    float: right;
+    background-color: #6887F2;
+    line-height: 1.25em;
+  }
+
   .icon-block-menu {
     display: none;
   }
@@ -90,9 +102,10 @@
     display: inline;
     color: #111;
   }
-    .nav-bar ul li {
-      display: inline;
-    }
+
+  .nav-bar ul li {
+    display: inline;
+  }
 
   .nav-bar ul li a {
     padding: 10px 15px;

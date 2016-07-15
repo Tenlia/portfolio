@@ -18,9 +18,7 @@ viewSorting.fillFilters = function() {
 
 viewSorting.selectAuthor = function() {
   $('#authors-filter').on('change', function() {
-    console.log($('article h3'));
     if($(this).val()) {
-      console.log($(this).val());
       var x = $(this).val();
       $('article').hide();
       $('article h3:contains("' + x + '")').parent().fadeIn(350);
@@ -33,7 +31,7 @@ viewSorting.selectAuthor = function() {
 viewSorting.switchTabs = function() {
   $('#home-tab').on('click', function() {
     $('#about-me').hide();
-    $('#articles').show();
+    $('#articles').fadeIn(350);
     $('article').not('.template').fadeIn(350);
     $('authors-filter').val('');
   });
@@ -42,6 +40,13 @@ viewSorting.switchTabs = function() {
     $('#about-me').fadeIn(350);
   });
 };
+
+$(window).resize(function() {
+  if($(window).width() >= '650') {
+    $('#articles').show();
+    $('#about-me').show();
+  }
+});
 
 viewSorting.fillFilters();
 viewSorting.selectAuthor();
