@@ -34,16 +34,12 @@
   color: #111;
 }
 
-.blog_entry a {
-  color: #FFD400;
-  background-color: #111;
-  padding: 10px 15px;
-  border-radius: 4px;
+#content {
+  margin-top: 1em;
 }
 
-.blog_entry a span {
-  font-family: 'Oswald', sans-serif;
-  color: #FFD400;
+#content p {
+  padding: .25em;
 }
 
 #about-me h2 {
@@ -52,7 +48,29 @@
 }
 
 #about-me p {
-  padding: 15px;
+  padding: 1em;
+}
+
+article title {
+  margin-top: 1em;
+  margin-bottom: .5em;
+}
+
+article h3 {
+  margin: .5em 0;
+}
+
+article a {
+  margin-bottom: 10px;
+  color: #FFD400;
+  background-color: #111;
+  padding: 10px 15px;
+  border-radius: 4px;
+}
+
+article a span {
+  font-family: 'Oswald', sans-serif;
+  color: #FFD400;
 }
 
 @media only screen and (max-width:650px) {
