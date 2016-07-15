@@ -1,4 +1,3 @@
-/*more specific styling here*/
 
 .menu {
   display: block;
@@ -79,10 +78,6 @@
 }
 
 @media only screen and (min-width:650px) {
-
-  /*#article {
-    display: inline;
-  }*/
 
   #about-me {
     display: inline;
