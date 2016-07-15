@@ -1,12 +1,22 @@
 /*more styling here*/
-.articles {
-  width: 700px;
-  max-width: 100%;
-  float: left;
-}
 
 .about-me {
   display: none;
+}
+
+#articles {
+  width: 680px;
+  max-width: 100%;
+  float: left;
+  padding: .5em;
+}
+
+.authors, .times {
+  margin-bottom: .5em;
+}
+
+.about {
+  margin-top: .5em;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -15,5 +25,6 @@
     width: 250px;
     float: right;
     background-color: #6887F2;
+    line-height: 1.25em;
   }
 }

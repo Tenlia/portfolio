@@ -1,5 +1,7 @@
 * {
   /*outline: 1px dotted orange;*/
+  font-family: 'Oswald', sans-serif;
+  color: #111;
 }
 
 header {
@@ -13,7 +15,7 @@ header {
 main {
   width: 960px;
   max-width: 100%;
-  margin: 20px auto;
+  margin: 0px auto;
 }
 
 footer {
@@ -41,13 +43,23 @@ img {
   max-width: 100%;
 }
 
-/*p {
-  width: 680px;
-  max-width: 100%;
-  padding: 10px
-}*/
-
 a {
   text-decoration: none;
   color: #111;
+}
+
+title {
+  display: block;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1.5em;
+  margin-left: .5em;
+  margin-top: .25em;
+  margin-bottom: .1em;
+  background-color: #FFD400;
+  padding: .5em;
+
+}
+
+.template {
+  display: none;
 }
