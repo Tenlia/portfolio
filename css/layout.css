@@ -1,12 +1,12 @@
 /*more styling here*/
 
-.about-me {
+#about-me {
   display: none;
 }
 
 #articles {
   width: 680px;
-  max-width: 100%;
+  max-width: 95%;
   float: left;
   padding: .5em;
 }
@@ -17,14 +17,4 @@
 
 .about {
   margin-top: .5em;
-}
-
-@media only screen and (min-width: 1000px) {
-  .about-me {
-    display: inline;
-    width: 250px;
-    float: right;
-    background-color: #6887F2;
-    line-height: 1.25em;
-  }
 }
