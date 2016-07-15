@@ -1,19 +1,29 @@
 var viewSorting = {};
 
 viewSorting.fillFilters = function() {
-  $('article').not('template').each(function() {
-    var authorNames, optionTag;
-    authorNames = $(this).find('h3').text();
-    optionTag = '<option value="' + authorNames + '">' + authorNames + '</option>';
+  var aArray = [];
+  for(var o in ourArticles) {
+    for(var i = 0; i < ourArticles[o].authors.length; i++) {
+      if(!JSON.stringify(aArray).includes(ourArticles[o].authors[i])) {
+        aArray.push(ourArticles[o].authors[i]);
+      }
+    }
+  }
+  var authorNames, optionTag;
+  for(var i = 0; i < aArray.length; i++) {
+    optionTag = '<option value="' + aArray[i] + '">' + aArray[i] + '</option>';
     $('#authors-filter').append(optionTag);
-  });
+  }
 };
 
 viewSorting.selectAuthor = function() {
   $('#authors-filter').on('change', function() {
+    console.log($('article h3'));
     if($(this).val()) {
+      console.log($(this).val());
+      var x = $(this).val();
       $('article').hide();
-      $('article[data-authors"' + $(this).val() + '"]').fadeIn(350);
+      $('article h3:contains("' + x + '")').parent().fadeIn(350);
     } else {
       $('article').not('.template').fadeIn(350);
     }

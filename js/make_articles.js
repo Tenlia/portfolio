@@ -17,6 +17,7 @@ Entry.prototype.toHtml = function() {
   $newEntry.find('.authors').text(this.authors);
   $newEntry.find('.repo').attr('href', this.link);
   $newEntry.find('.about').text(this.about);
+
   $newEntry.attr('data-authors', this.authors);
 
   $newEntry.find('time[pubdate]').attr('title', this.pubDate);
