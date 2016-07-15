@@ -9,6 +9,18 @@
     <link href="css/layout.css" rel="stylesheet">
     <link href="css/modules.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bangers|Oswald|Permanent+Marker" rel="stylesheet">
+    <script id="article-template" type="text-handlebar-template">
+      <article>
+        <title>{{title}}</title>
+        Project Authors: <h3>{{authors}}</h3>
+        <div class="times">
+          Published: <time>{{pubDate}}</time>
+          Last Updated: <time>{{lastUpdate}}</time>
+        </div>
+        <a href="{{link}}" class="repo, icon-social-github"><span>Github Project Repo</span></a>
+        {{{about}}}
+      </article>
+    </script>
   </head>
   <body>
     <header>
@@ -33,21 +45,32 @@
             </select>
           </li>
         </ul>
-        <article class="template">
+    <!--     <article class="template">
           <img src="">
-          <title></title>
-          Project Authors: <h3 class="authors"></h3>
-          <div class="times">
-            Published: <time pubdate datetime="2000-01-01" class="pub-date"></time>
-            Last Updated: <time update datetime="2000-01-01" class="update"></time>
-          </div>
-          <a href="" class="repo, icon-social-github"><span>Github Project Repo</span></a>
-          <p class="about"></p>
-        </article>
+           <title></title>
+           Project Authors: <h3 class="authors"></h3>
+           <div class="times">
+             Published: <time pubdate datetime="2000-01-01" class="pub-date"></time>
+             Last Updated: <time update datetime="2000-01-01" class="update"></time>
+           </div>
+           <a href="" class="repo, icon-social-github"><span>Github Project Repo</span></a>
+           <p class="about"></p>
+         </article> -->
       </section>
       <section id="about-me">
         <h2>About Elizabeth</h2>
-        <p>Tacos ennui pitchfork fashion axe. Shabby chic ramps gluten-free, bushwick portland 3 wolf moon brooklyn flexitarian chicharrones food truck blog dreamcatcher franzen quinoa echo park. Slow-carb paleo hella, ennui narwhal banjo normcore craft beer squid polaroid gluten-free literally mustache. Beard tilde retro paleo, XOXO DIY scenester art party tattooed yr brooklyn. Etsy venmo brooklyn waistcoat pitchfork heirloom leggings, vegan aesthetic fap. Post-ironic iPhone shoreditch green juice drinking vinegar tattooed. Beard hashtag try-hard tacos, tumblr dreamcatcher chartreuse microdosing fixie. Knausgaard craft beer asymmetrical, normcore readymade blog narwhal quinoa iPhone plaid dreamcatcher. Meggings pinterest 3 wolf moon post-ironic. Venmo tofu narwhal, gochujang knausgaard asymmetrical fashion axe man braid paleo. Photo booth portland leggings, gluten-free man braid next level aesthetic food truck. Thundercats lomo occupy forage, green juice echo park flannel you probably haven't heard of them. Sriracha disrupt viral chicharrones, next level skateboard ugh. Chia pug schlitz microdosing, irony tumblr post-ironic franzen. Salvia polaroid ennui microdosing chicharrones banh mi. Polaroid chambray you probably haven't heard of them, pinterest man bun swag messenger bag humblebrag fap austin. Flexitarian art party lomo knausgaard, cliche helvetica hammock. Thundercats artisan yr farm-to-table cardigan. Dreamcatcher pour-over banh mi forage. Marfa seitan tumblr, banh mi post-ironic salvia locavore plaid synth chia. Vegan echo park fashion axe, mumblecore tattooed gastropub thundercats keytar bushwick sriracha banh mi farm-to-table YOLO PBR+B. Organic crucifix wayfarers, post-ironic tacos ugh iPhone. Kinfolk listicle cornhole, asymmetrical flannel godard mixtape organic meggings direct trade polaroid. Raw denim tacos pinterest, pug banh mi forage direct trade quinoa kinfolk paleo pop-up celiac dreamcatcher. Listicle selvage tofu, drinking vinegar microdosing austin tumblr mlkshk everyday carry normcore neutra chicharrones affogato. Gochujang vegan forage, shoreditch put a bird on it tousled occupy narwhal bushwick kale chips keytar bicycle rights viral offal. Helvetica vegan pitchfork, sartorial freegan bicycle rights fashion axe 90's offal gentrify hammock shoreditch cornhole. Jean shorts neutra single-origin coffee 8-bit, four dollar toast street art lomo plaid yr man braid bushwick paleo. Fingerstache health goth you probably haven't heard of them mustache vice. You probably haven't heard of them trust fund fashion axe thundercats selvage. Everyday carry cold-pressed VHS twee typewriter. Kinfolk fingerstache street art mixtape etsy austin, shabby chic cold-pressed VHS. Cardigan chambray ramps, sustainable fanny pack kickstarter shabby chic waistcoat kombucha pop-up banjo twee farm-to-table brunch whatever. Whatever pinterest pitchfork, kombucha wayfarers semiotics try-hard cliche 8-bit health goth banh mi. Cronut cardigan portland, pop-up art party PBR+B drinking vinegar stumptown messenger bag single-origin coffee four dollar toast tattooed quinoa scenester.</p>
+        <p>
+          Whatever quinoa dreamcatcher, pinterest pickled pitchfork polaroid bushwick bicycle rights normcore tacos meh ennui. Biodiesel ramps shoreditch cardigan direct trade twee chartreuse, waistcoat selvage post-ironic tilde retro kickstarter tumblr flexitarian. Disrupt authentic hashtag, raw denim messenger bag butcher whatever farm-to-table lo-fi gochujang chartreuse. Asymmetrical bicycle rights chambray 90's messenger bag irony. Waistcoat fanny pack ennui, gentrify trust fund hashtag leggings four dollar toast cornhole. Humblebrag pop-up mixtape flannel, shabby chic food truck lo-fi forage asymmetrical viral thundercats VHS helvetica. Health goth disrupt blog marfa lomo.
+        </p>
+        <p>
+          Mixtape migas ethical normcore, forage lo-fi cardigan actually ugh fap. Wayfarers distillery meggings kinfolk, roof party etsy neutra marfa. Poutine lumbersexual sustainable mumblecore. Leggings meh try-hard lumbersexual man bun tacos. Waistcoat helvetica poutine lo-fi blue bottle. Gochujang craft beer before they sold out, cold-pressed retro photo booth kitsch franzen letterpress ugh sartorial locavore. Seitan ugh wolf kinfolk distillery tote bag bicycle rights yr, deep v squid single-origin coffee actually.
+        </p>
+        <p>
+          Cornhole forage aesthetic, affogato mumblecore heirloom fashion axe iPhone flexitarian kogi lumbersexual thundercats. Occupy pork belly 8-bit, synth etsy next level sustainable health goth tattooed irony. Retro swag disrupt shabby chic, kickstarter dreamcatcher tilde fap wolf bespoke meggings VHS pug bicycle rights humblebrag. Hoodie 90's man braid, leggings blog green juice brooklyn iPhone chambray twee yr gluten-free. Microdosing yuccie authentic cornhole lumbersexual. Art party cornhole lo-fi heirloom. Sustainable master cleanse typewriter, freegan truffaut chia quinoa.
+        </p>
+        <p>
+          Small batch beard authentic green juice gluten-free, direct trade bushwick franzen microdosing banh mi knausgaard shabby chic austin. Umami actually tacos vegan next level. Literally put a bird on it disrupt, direct trade fixie try-hard everyday carry tilde. Brunch actually jean shorts, pork belly street art iPhone fashion axe hella paleo waistcoat biodiesel franzen cray. Hashtag cardigan williamsburg, cred leggings shabby chic 3 wolf moon aesthetic readymade kitsch iPhone whatever wayfarers umami raw denim. Aesthetic ugh heirloom, listicle mixtape master cleanse vegan next level kitsch mumblecore. Wolf XOXO distillery, vinyl sustainable truffaut YOLO actually roof party tilde quinoa meditation yr gochujang.
+        </p>
       </section>
     </main>
     <footer>
