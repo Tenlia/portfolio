@@ -1,3 +1,5 @@
+'use strict';
+
 var ourArticles = [
   {
     title: 'Lushootseed',
