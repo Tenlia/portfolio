@@ -1,4 +1,3 @@
-/*more styling here*/
 
 #about-me {
   display: none;
@@ -12,7 +11,7 @@
 }
 
 .authors, .times {
-  margin-bottom: .5em;
+  margin-bottom: 1em;
 }
 
 .about {

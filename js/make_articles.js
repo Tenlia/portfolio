@@ -1,3 +1,5 @@
+'use strict';
+
 var allArticles = [];
 
 function Entry(input) {
@@ -10,21 +12,16 @@ function Entry(input) {
 }
 
 Entry.prototype.toHtml = function() {
-  var $newEntry = $('article.template').clone();
-  $newEntry.removeClass('template').addClass('blog_entry');
+  var source = $('#article-template').html();
 
-  $newEntry.find('title').text(this.title);
-  $newEntry.find('.authors').text(this.authors);
-  $newEntry.find('.repo').attr('href', this.link);
-  $newEntry.find('.about').text(this.about);
+  this.publishDaysAgo = parseInt((new Date() - new Date(this.pubDate))/60/60/24/1000);
+  this.publishStatus = this.pubDate ? 'Published ' + this.publishDaysAgo + ' days ago' : '(in progress)';
+  this.updateDaysAgo = parseInt((new Date() - new Date(this.lastUpdate))/60/60/24/1000);
+  this.updateStatus = this.lastUpdate ? 'Updated ' + this.updateDaysAgo + ' days ago' : '(not updated)';
 
-  $newEntry.attr('data-authors', this.authors);
-
-  $newEntry.find('time[pubdate]').attr('title', this.pubDate);
-  $newEntry.find('time.pub_date').html('about ' + parseInt((new Date() - new Date(this.pubDate))/60/60/24/1000) + ' days ago');
-  $newEntry.find('time[update]').attr('title', this.lastUpdate);
-  $newEntry.find('time.update').html('about ' + parseInt((new Date() - new Date(this.lastUpdate))/60/60/24/1000) + ' days ago');
-  return($newEntry);
+  var content = Handlebars.compile(source);
+  
+  return content(this);
 };
 
 ourArticles.sort(function(a,b) {
@@ -35,6 +32,6 @@ ourArticles.forEach(function(obj) {
   allArticles.push(new Entry(obj));
 });
 
-allArticles.forEach(function(a) {
-  $('#articles').append(a.toHtml());
+allArticles.forEach(function(entry) {
+  $('#articles').append(entry.toHtml());
 });
