@@ -1,6 +1,5 @@
 
 * {
-  /*outline: 1px dotted orange;*/
   font-family: 'Oswald', sans-serif;
   color: #111;
 }
@@ -59,8 +58,4 @@ title {
   background-color: #FFD400;
   padding: .5em;
 
-}
-
-.template {
-  display: none;
 }

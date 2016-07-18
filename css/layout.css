@@ -1,6 +1,28 @@
-
-#about-me {
+.template {
   display: none;
+}
+
+.menu {
+  display: block;
+}
+
+.icon-block-menu {
+  font-size: 2em;
+  position: relative;
+  bottom: 5px;
+  left: 5px;
+}
+
+.authors, .times {
+  margin-bottom: 1em;
+}
+
+.about {
+  margin-top: .5em;
+}
+
+#content {
+  margin-top: 1em;
 }
 
 #articles {
@@ -10,10 +32,6 @@
   padding: .5em;
 }
 
-.authors, .times {
-  margin-bottom: 1em;
-}
-
-.about {
-  margin-top: .5em;
+#about-me {
+  display: none;
 }

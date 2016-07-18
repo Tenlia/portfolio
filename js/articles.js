@@ -3,7 +3,7 @@
 var ourArticles = [
   {
     title: 'Lushootseed',
-    authors: ['Alison Zerbe', 'Aziza Houni', 'Derek Hewitt', 'Elizabeth Kleinschmidt'],
+    authors: ['Alison Zerbe', 'Aziza Alhouni', 'Derek Hewitt', 'Elizabeth Kleinschmidt'],
     pubDate: '2016-07-01',
     lastUpdate: '2016-07-13',
     link: 'https://github.com/AlisonZ/lushootseed',
