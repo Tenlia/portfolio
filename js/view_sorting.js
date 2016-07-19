@@ -50,6 +50,6 @@ $(window).resize(function() {
   }
 });
 
-viewSorting.fillFilters();
-viewSorting.selectAuthor();
-viewSorting.switchTabs();
+// viewSorting.fillFilters();
+// viewSorting.selectAuthor();
+// viewSorting.switchTabs();
