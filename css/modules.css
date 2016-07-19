@@ -60,6 +60,10 @@ article a span {
 
 @media only screen and (max-width:650px) {
 
+  header {
+    margin-bottom: 20px;
+  }
+
   .nav-bar:hover a {
     display: block;
     background-color: #FFD400;
@@ -87,7 +91,6 @@ article a span {
     width: 250px;
     float: right;
     background-color: #6887F2;
-    line-height: 1.25em;
   }
 
   .icon-block-menu {
@@ -110,7 +113,7 @@ article a span {
     border-radius: 4px;
   }
 
-  .icon-social-github, .icon-social-twitter, .icon-social-pinterest {
+  .icon-social-github, .icon-social-twitter {
     margin-left: 30px;
   }
 
