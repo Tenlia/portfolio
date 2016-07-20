@@ -1,15 +1,20 @@
 'use strict';
 
-var allArticles = [];
-
 function Entry(input) {
-  this.title = input.title;
-  this.authors = input.authors;
-  this.pubDate = input.pubDate;
-  this.lastUpdate = input.lastUpdate;
-  this.link = input.link;
-  this.about = input.about;
-}
+  for(var keys in input) {
+    this[keys] = input[keys]
+  }
+};
+
+Entry.pullArticles = function() {
+  $.getJSON('json/articles.json', function(articleContent) {
+    Entry.processArticles(articleContent);
+    localStorage.storedArticles = JSON.stringify(articleContent);
+    articlesRender.render();
+  })
+};
+
+Entry.allEntries = [];
 
 Entry.prototype.toHtml = function() {
   var source = $('#article-template').html();
@@ -24,14 +29,13 @@ Entry.prototype.toHtml = function() {
   return content(this);
 };
 
-ourArticles.sort(function(a,b) {
-  return (new Date(b.pubDate)) - (new Date(a.pubDate));
-});
+Entry.processArticles = function(articlesPassedIn) {
+  articlesPassedIn.sort(function(a,b) {
+    return (new Date(b.pubDate)) - (new Date(a.pubDate));
+  })
+  .forEach(function(obj) {
+    Entry.allEntries.push(new Entry(obj));
+  });
+};
 
-ourArticles.forEach(function(obj) {
-  allArticles.push(new Entry(obj));
-});
-
-allArticles.forEach(function(entry) {
-  $('#articles').append(entry.toHtml());
-});
+Entry.pullArticles();
