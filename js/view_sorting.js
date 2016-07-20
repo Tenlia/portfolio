@@ -43,6 +43,8 @@ viewSorting.switchTabs = function() {
   });
 };
 
+
+
 $(window).resize(function() {
   if($(window).width() >= '650') {
     $('#articles').show();

@@ -5,3 +5,5 @@ articlesRender.render = function() {
     	$('#articles').append(entry.toHtml());
   	});
 }
+
+Entry.pullArticles();
