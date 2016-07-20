@@ -4,10 +4,10 @@ var viewSorting = {};
 
 viewSorting.fillFilters = function() {
   var aArray = [];
-  for(var o in ourArticles) {
-    for(var i = 0; i < ourArticles[o].authors.length; i++) {
-      if(!JSON.stringify(aArray).includes(ourArticles[o].authors[i])) {
-        aArray.push(ourArticles[o].authors[i]);
+  for(var o in Entry.allEntries) {
+    for(var i = 0; i < Entry.allEntries[o].authors.length; i++) {
+      if(!JSON.stringify(aArray).includes(Entry.allEntries[o].authors[i])) {
+        aArray.push(Entry.allEntries[o].authors[i]);
       }
     }
   }
@@ -50,6 +50,6 @@ $(window).resize(function() {
   }
 });
 
-// viewSorting.fillFilters();
-// viewSorting.selectAuthor();
-// viewSorting.switchTabs();
+viewSorting.fillFilters();
+viewSorting.selectAuthor();
+viewSorting.switchTabs();

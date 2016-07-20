@@ -1,9 +1,17 @@
 'use strict';
 
 function Entry(input) {
-  for(keys in input) {
+  for(var keys in input) {
     this[keys] = input[keys]
   }
+};
+
+Entry.pullArticles = function() {
+  $.getJSON('json/articles.json', function(articleContent) {
+    Entry.processArticles(articleContent);
+    localStorage.storedArticles = JSON.stringify(articleContent);
+    articlesRender.render();
+  })
 };
 
 Entry.allEntries = [];
@@ -21,14 +29,13 @@ Entry.prototype.toHtml = function() {
   return content(this);
 };
 
-Entry.allEntries.sort(function(a,b) {
-  return (new Date(b.pubDate)) - (new Date(a.pubDate));
-});
+Entry.processArticles = function(articlesPassedIn) {
+  articlesPassedIn.sort(function(a,b) {
+    return (new Date(b.pubDate)) - (new Date(a.pubDate));
+  })
+  .forEach(function(obj) {
+    Entry.allEntries.push(new Entry(obj));
+  });
+};
 
-articlesPassedIn.forEach(function(obj) {
-  Entry.allEntries.push(new Entry(obj));
-});
-
-Entry.allEntries.forEach(function(entry) {
-  $('#articles').append(entry.toHtml());
-});
+Entry.pullArticles();
