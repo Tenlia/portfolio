@@ -8,11 +8,16 @@
   };
 
   Entry.pullArticles = function() {
-    $.getJSON('json/articles.json', function(articleContent) {
-      Entry.processArticles(articleContent);
-      localStorage.storedArticles = JSON.stringify(articleContent);
+    if(localStorage.storedArticles){
+      Entry.processArticles(JSON.parse(localStorage.storedArticles));
       articlesRender.render();
-    })
+    } else {
+      $.getJSON('json/articles.json', function(articleContent) {
+        Entry.processArticles(articleContent);
+        localStorage.storedArticles = JSON.stringify(articleContent);
+        articlesRender.render();
+      })
+    }
   };
 
   Entry.allEntries = [];
@@ -37,7 +42,12 @@
     .forEach(function(obj) {
       Entry.allEntries.push(new Entry(obj));
     });
+    return Entry.allEntries;
   };
+
+  Entry.makingFooterData = function(array) {
+
+  }
 
   module.Entry = Entry;
 

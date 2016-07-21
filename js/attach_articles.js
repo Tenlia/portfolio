@@ -7,3 +7,6 @@ articlesRender.render = function() {
 }
 
 Entry.pullArticles();
+viewSorting.fillFilters();
+viewSorting.selectAuthor();
+viewSorting.switchTabs();
