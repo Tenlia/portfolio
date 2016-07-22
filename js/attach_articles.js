@@ -5,3 +5,8 @@ articlesRender.render = function() {
     	$('#articles').append(entry.toHtml());
   	});
 }
+
+Entry.pullArticles();
+viewSorting.fillFilters();
+viewSorting.selectAuthor();
+viewSorting.switchTabs();
