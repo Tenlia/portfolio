@@ -3,30 +3,28 @@
 (function(module) {
   
   var viewSorting = {};
+  var newAuthorArray = [];
 
   viewSorting.fillFilters = function() {
-    (Entry.allEntries).map(function(authorArray) {
-      var newAuthorArray = [];
-      // var smallAuthorArray = 
-      // console.log(smallAuthorArray);
-      newAuthorArray.push((authorArray.authors).valueOf());
-      console.log(newAuthorArray);
-      return newAuthorArray;
+    return (Entry.allEntries).map(function(authorArray) {
+      var smallAuthorArray = eval(authorArray.authors);
+      newAuthorArray.push(smallAuthorArray);
+      newAuthorArray.reduce(function(mergedAuthorArray, current, index, array) {
+        $.merge(mergedAuthorArray, current);
+        return mergedAuthorArray;
+      }, [])
+      .reduce(function(authorFilterArray, currentAuthor, index, array) {
+        if(authorFilterArray.indexOf(currentAuthor) === -1) {
+          authorFilterArray.push(currentAuthor);
+        }
+        return authorFilterArray;
+      }, []);
+    })
+    console.log(authorFilterArray);
+    authorFilterArray.each(function(author) {
+      var optionTag = '<option value="' + author + '">' + author + '</option>';
+      $('#authors-filter').append(optionTag);
     });
-    // .reduce(function(mergedAuthorArray, currentAuthorsArray, index, array){
-    //   console.log(mergedAuthorArray, currentAuthorsArray);
-    //   return mergedAuthorArray.concat(currentAuthorsArray);
-    // }, []);
-    // .reduce(function(authorFilterArray, currentAuthor, index, array) {
-    //   if(authorFilterArray.indexOf(currentAuthor) === -1) {
-    //     authorFilterArray.push(currentAuthor);
-    //   }
-    //   return authorFilterArray;
-    // }, []);
-    // $(authorFilterArray).each(function(author) {
-    //   optionTag = '<option value="' + author + '">' + author + '</option>';
-    //   $('#authors-filter').append(optionTag);
-    // });
   };
 
   viewSorting.selectAuthor = function() {
