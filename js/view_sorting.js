@@ -5,40 +5,37 @@
   var viewSorting = {};
   var newAuthorArray = [];
 
-  viewSorting.fillFilters = function() {
-    return (Entry.allEntries).map(function(authorArray) {
-      var smallAuthorArray = eval(authorArray.authors);
-      newAuthorArray.push(smallAuthorArray);
-      newAuthorArray.reduce(function(mergedAuthorArray, current, index, array) {
-        $.merge(mergedAuthorArray, current);
-        return mergedAuthorArray;
-      }, [])
-      .reduce(function(authorFilterArray, currentAuthor, index, array) {
-        if(authorFilterArray.indexOf(currentAuthor) === -1) {
-          authorFilterArray.push(currentAuthor);
-        }
-        return authorFilterArray;
-      }, []);
+  viewSorting.filterAuthorEntries = function() {
+    viewSorting.testArray = Entry.allEntries.map(function(entry) {
+      return eval(entry.authors);
     })
-    console.log(authorFilterArray);
-    authorFilterArray.each(function(author) {
-      var optionTag = '<option value="' + author + '">' + author + '</option>';
+    .reduce(function(fullArray, currentArray) {
+      return fullArray.concat(currentArray);
+    })
+    .filter(function(name, index, array){
+      return array.indexOf(name) === index;
+    })
+  };
+
+  viewSorting.makeAuthorOptionTags = function(filterArray) {
+    console.log(filterArray);
+    filterArray.forEach(function(currentAuthor) {
+      var optionTag = '<option value="' + currentAuthor + '">' + currentAuthor + '</option>';
       $('#authors-filter').append(optionTag);
+      console.log('filterArray kicked-off');
     });
+      viewSorting.selectAuthor = function() {
+      $('#authors-filter').on('change', function() {
+        if($(this).val()) {
+          var authorName = $(this).val();
+          $('article').hide();
+          $('article h3:contains("' + authorName + '")').parent().fadeIn(350);
+        } else {
+          $('article').not('.template').fadeIn(350);
+        }
+      });
+    };
   };
-
-  viewSorting.selectAuthor = function() {
-    $('#authors-filter').on('change', function() {
-      if($(this).val()) {
-        var authorName = $(this).val();
-        $('article').hide();
-        $('article h3:contains("' + authorName + '")').parent().fadeIn(350);
-      } else {
-        $('article').not('.template').fadeIn(350);
-      }
-    });
-  };
-
   viewSorting.switchTabs = function() {
     $('#home-tab').on('click', function() {
       $('#about-me').hide();

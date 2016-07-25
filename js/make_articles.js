@@ -1,6 +1,8 @@
 'use strict';
 (function(module) {
 
+  Entry.allEntries = [];
+
   function Entry(input) {
     for(var keys in input) {
       this[keys] = input[keys]
@@ -19,8 +21,6 @@
       })
     }
   };
-
-  Entry.allEntries = [];
 
   Entry.prototype.toHtml = function() {
     var source = $('#article-template').html();
