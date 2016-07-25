@@ -9,5 +9,8 @@ articlesRender.render = function() {
 Entry.pullArticles();
 
 viewSorting.fillFilters();
+var filteredAuthors = viewSorting.fillFilters();
+console.log(filteredAuthors);
+viewSorting.makeAuthorOptionTags(filteredAuthors);
 viewSorting.selectAuthor();
 viewSorting.switchTabs();
