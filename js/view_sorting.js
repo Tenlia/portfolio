@@ -5,7 +5,7 @@
   var viewSorting = {};
 
   viewSorting.filterAuthorEntries = function() {
-    viewSorting.testArray = Entry.allEntries.map(function(entry) {
+    viewSorting.filteredAuthors = Entry.allEntries.map(function(entry) {
       return eval(entry.authors);
     })
     .reduce(function(fullArray, currentArray) {
@@ -14,12 +14,10 @@
     .filter(function(name, index, array){
       return array.indexOf(name) === index;
     });
-    viewSorting.makeAuthorOptionTags();
   };
 
-  viewSorting.makeAuthorOptionTags = function(filterArray) {
-    console.log(filterArray);
-    filterArray.forEach(function(currentAuthor) {
+  viewSorting.makeAuthorOptionTags = function() {
+    viewSorting.filteredAuthors.forEach(function(currentAuthor) {
       var optionTag = '<option value="' + currentAuthor + '">' + currentAuthor + '</option>';
       $('#authors-filter').append(optionTag);
       console.log('filterArray kicked-off');
