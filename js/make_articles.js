@@ -5,7 +5,7 @@
 
   function Entry(input) {
     for(var keys in input) {
-      this[keys] = input[keys]
+      this[keys] = input[keys];
     }
   };
 
@@ -18,7 +18,7 @@
         Entry.processArticles(articleContent);
         localStorage.storedArticles = JSON.stringify(articleContent);
         articlesRender.render();
-      })
+      });
     }
   };
 
@@ -31,7 +31,7 @@
     this.updateStatus = this.lastUpdate ? 'Updated ' + this.updateDaysAgo + ' days ago' : '(not updated)';
 
     var content = Handlebars.compile(source);
-    
+
     return content(this);
   };
 
@@ -47,7 +47,7 @@
 
   Entry.makingFooterData = function(array) {
 
-  }
+  };
 
   module.Entry = Entry;
 
