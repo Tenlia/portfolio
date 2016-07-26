@@ -10,4 +10,4 @@ Entry.pullArticles();
 
 viewSorting.makeAuthorOptionTags(viewSorting.filterAuthorEntries());
 viewSorting.selectAuthor();
-viewSorting.switchTabs();
+// viewSorting.switchTabs();

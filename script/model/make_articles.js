@@ -45,10 +45,6 @@
     return Entry.allEntries;
   };
 
-  Entry.makingFooterData = function(array) {
-
-  };
-
   module.Entry = Entry;
 
 })(window);

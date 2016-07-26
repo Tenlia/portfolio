@@ -35,7 +35,7 @@
     };
   };
 
-  viewSorting.resize(function() {
+  $(viewSorting).resize(function() {
     if($(window).width() <= '950') {
       $('#about-me').hide();
     } else {
