@@ -59,3 +59,7 @@ title {
   padding: .5em;
 
 }
+
+ul {
+  list-style: none;
+}
