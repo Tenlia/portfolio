@@ -14,7 +14,7 @@
       Entry.processArticles(JSON.parse(localStorage.storedArticles));
       articlesRender.render();
     } else {
-      $.getJSON('json/articles.json', function(articleContent) {
+      $.getJSON('data/articles.json', function(articleContent) {
         Entry.processArticles(articleContent);
         localStorage.storedArticles = JSON.stringify(articleContent);
         articlesRender.render();
