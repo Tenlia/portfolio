@@ -20,7 +20,6 @@
     viewSorting.filteredAuthors.forEach(function(currentAuthor) {
       var optionTag = '<option value="' + currentAuthor + '">' + currentAuthor + '</option>';
       $('#authors-filter').append(optionTag);
-      // console.log('filterArray kicked-off');
     });
     viewSorting.selectAuthor = function() {
       $('#authors-filter').on('change', function() {
@@ -39,7 +38,8 @@
     if($(window).width() <= '950') {
       $('#about-me').hide();
     } else {
-      $('#about-me').show();
+      $('#about-me').fadeIn(350);
+      $('#articles').fadeIn(350);
     }
   });
 
