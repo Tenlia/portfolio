@@ -12,6 +12,7 @@
 			},
 			success: function(data, message, xhr) {
 				data.forEach(function(current) {
+					// console.log(current);
 					reposObject.callingCollaborators(current.name);
 				});
 			}
@@ -26,10 +27,8 @@
 				'Authorization': 'token ' + token,
 			},
 			success: function(collabData, message, xhr) {
-				console.log(name);
+				// console.log(name);
 				// console.log(collabData);
-				current.collabData = collabData;
-				console.log(current.collabData);
 			}
 		});
 	}
@@ -51,12 +50,13 @@
 						'Authorization': 'token ' + token,
 					},
 					success: function(urldata, message, xhr) {
-						console.log(urldata);
+						// console.log(urldata);
 					}
 				})
 			});
 		}
 	});
+
 	reposObject.callingRepos();
 
 	module.reposObject = reposObject;
