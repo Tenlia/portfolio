@@ -20,7 +20,6 @@
     viewSorting.filteredAuthors.forEach(function(currentAuthor) {
       var optionTag = '<option value="' + currentAuthor + '">' + currentAuthor + '</option>';
       $('#authors-filter').append(optionTag);
-      console.log('filterArray kicked-off');
     });
     viewSorting.selectAuthor = function() {
       $('#authors-filter').on('change', function() {
@@ -34,28 +33,13 @@
       });
     };
   };
-  viewSorting.switchTabs = function() {
-    $('#home-tab').on('click', function() {
-      $('#about-me').hide();
-      $('#articles').fadeIn(350);
-      $('article').not('.template').fadeIn(350);
-      $('authors-filter').val('');
-    });
-    $('#about-tab').on('click', function() {
-      $('#articles').hide();
-      $('#about-me').fadeIn(350);
-    });
-  };
 
-  $(window).resize(function() {
-    if($(window).width() >= '650') {
-      $('#articles').show();
-      // $('#about-me').show();
-    }
-    if($(window).width() < '950') {
+  $(viewSorting).resize(function() {
+    if($(window).width() <= '950') {
       $('#about-me').hide();
     } else {
-      $('#about-me').show();
+      $('#about-me').fadeIn(350);
+      $('#articles').fadeIn(350);
     }
   });
 

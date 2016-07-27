@@ -3,11 +3,11 @@
   <head>
     <title>Elizabeth Kleinschmidt</title>
     <meta name="viewport" content="width=device-width initial-scale=1">
-    <link href="vendors/reset.css" rel="stylesheet">
-    <link href="vendors/metrize/metrize.css" rel="stylesheet">
-    <link href="css/base.css" rel="stylesheet">
-    <link href="css/layout.css" rel="stylesheet">
-    <link href="css/modules.css" rel="stylesheet">
+    <link href="vendor/reset.css" rel="stylesheet">
+    <link href="vendor/metrize/metrize.css" rel="stylesheet">
+    <link href="style/base.css" rel="stylesheet">
+    <link href="style/layout.css" rel="stylesheet">
+    <link href="style/modules.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bangers|Oswald|Permanent+Marker" rel="stylesheet">
     <script id="article-template" type="text-handlebar-template">
       <article>
@@ -30,15 +30,15 @@
       <nav class="nav-bar">
         <div class="icon-block-menu"></div>
         <ul>
-          <li><a href="index.html" id="home-tab" class="icon-idea"><span>Home</span></a></li>
-          <li><a href="#" id="about-tab" class="icon-user"><span>About Me</span></a></li>
+          <li><a href="./" id="home-tab" class="icon-idea"><span>Home</span></a></li>
+          <li><a href="./aboutme" id="about-tab" class="icon-user"><span>About Me</span></a></li>
           <li><a href="https://github.com/Tenlia" class="icon-social-github"><span>GitHub</span></a></li>
           <li><a href="https://twitter.com/MizTenlia" class="icon-social-twitter"><span>Twitter</span></a></li>
         </ul>
       <nav>
     </header>
     <main>
-      <section id="articles">
+      <section id="articles" class="view-content">
         <ul id="filters">
           <li>
             <select id="authors-filter">
@@ -47,7 +47,7 @@
           </li>
         </ul>
       </section>
-      <section id="about-me">
+      <section id="about-me" class="view-content">
         <h2>About Elizabeth</h2>
         <p>
           Whatever quinoa dreamcatcher, pinterest pickled pitchfork polaroid bushwick bicycle rights normcore tacos meh ennui. Biodiesel ramps shoreditch cardigan direct trade twee chartreuse, waistcoat selvage post-ironic tilde retro kickstarter tumblr flexitarian. Disrupt authentic hashtag, raw denim messenger bag butcher whatever farm-to-table lo-fi gochujang chartreuse. Asymmetrical bicycle rights chambray 90's messenger bag irony. Waistcoat fanny pack ennui, gentrify trust fund hashtag leggings four dollar toast cornhole. Humblebrag pop-up mixtape flannel, shabby chic food truck lo-fi forage asymmetrical viral thundercats VHS helvetica. Health goth disrupt blog marfa lomo.
@@ -64,11 +64,18 @@
       </section>
     </main>
     <footer></footer>
+    <!-- Vendor -->
+    <script src="vendor/page.js"></script>
     <script src="http://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
-    <!-- <script src="js/articles.js"></script> -->
-    <script src="js/make_articles.js"></script>
-    <script src="js/view_sorting.js"></script>
-    <script src="js/attach_articles.js"></script>
+    <!-- Model -->
+    <script src="script/model/make_articles.js"></script>
+    <!-- View -->
+    <script src="script/view/view_sorting.js"></script>
+    <script src="script/view/attach_articles.js"></script>
+    <!-- Controller -->
+    <script src="script/controller/view_about_me.js"></script>
+    <script src="script/controller/view_home.js"></script>
+    <script src="script/controller/routing.js"></script>
   </body>
 </html>

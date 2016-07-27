@@ -1,7 +1,6 @@
 .nav-bar ul {
   display: none;
   padding: 0;
-  list-style: none;
   clear: both;
 }
 
@@ -58,7 +57,7 @@ article a span {
   color: #FFD400;
 }
 
-@media only screen and (max-width:650px) {
+@media only screen and (max-width:740px) {
 
   header {
     margin-bottom: 20px;
@@ -83,7 +82,7 @@ article a span {
   }
 }
 
-@media only screen and (min-width:650px) {
+@media only screen and (min-width:740px) {
 
   #about-me {
     display: inline;
