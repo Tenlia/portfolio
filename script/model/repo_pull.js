@@ -33,7 +33,30 @@
 			}
 		});
 	}
-
+	
+	$.ajax({
+		url: 'https://api.github.com/repos/Tenlia/learning_journal/contents/',
+		type: 'GET',
+		headers: {
+			'Authorization': 'token ' + token,
+		},
+		success: function(entryData, message, xhr) {
+			// console.log(entryData);
+			entryData.forEach(function(current) {
+				$.ajax({
+					url: current.url,
+					type: 'GET',
+					headers: {
+						'Accept': 'application/vnd.github.v3.raw',
+						'Authorization': 'token ' + token,
+					},
+					success: function(urldata, message, xhr) {
+						console.log(urldata);
+					}
+				})
+			});
+		}
+	});
 	reposObject.callingRepos();
 
 	module.reposObject = reposObject;
