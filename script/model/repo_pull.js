@@ -14,6 +14,8 @@
 				data.forEach(function(current) {
 					// console.log(current);
 					reposObject.callingCollaborators(current.name);
+					reposObject.myRepos.push(current);
+					console.log(reposObject.myRepos);
 				});
 			}
 		});
@@ -29,10 +31,11 @@
 			success: function(collabData, message, xhr) {
 				// console.log(name);
 				// console.log(collabData);
+
 			}
 		});
 	}
-	
+
 	$.ajax({
 		url: 'https://api.github.com/repos/Tenlia/learning_journal/contents/',
 		type: 'GET',
