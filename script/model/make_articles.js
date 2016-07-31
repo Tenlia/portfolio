@@ -7,6 +7,7 @@
     for(var keys in input) {
       this[keys] = input[keys];
     }
+    console.log(Entry);
   };
 
   Entry.pullArticles = function() {
@@ -14,11 +15,12 @@
       Entry.processArticles(JSON.parse(localStorage.storedArticles));
       articlesRender.render();
     } else {
-      $.getJSON('data/articles.json', function(articleContent) {
-        Entry.processArticles(articleContent);
-        localStorage.storedArticles = JSON.stringify(articleContent);
-        articlesRender.render();
-      });
+      reposObject.callingRepos();
+      console.log(reposObject.myRepos);
+      Entry.processArticles(JSON.parse(reposObject.myRepos));
+      console.log('pulled repos');
+      // localStorage.storedArticles = JSON.stringify(reposObject.myRepos);
+      articlesRender.render();
     }
   };
 

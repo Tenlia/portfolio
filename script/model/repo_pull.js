@@ -4,63 +4,35 @@
 	reposObject.myRepos = [];
 
 	reposObject.callingRepos = function(nextfunction) {
-		$.ajax({
-			url: 'https://api.github.com/users/tenlia/repos',
-			type: 'GET',
-			headers: {
-				'Authorization': 'token ' + token,
-			},
-			success: function(data, message, xhr) {
-				data.forEach(function(current) {
-					// console.log(current);
-					reposObject.callingCollaborators(current.name);
-					reposObject.myRepos.push(current);
-					console.log(reposObject.myRepos);
-				});
-			}
+		$.get('/github/users/tenlia/repos')
+		.done(function(data, message, xhr) {
+			data.filter(function(current) {
+				return !current.fork;
+			})
+			.map(function(currentRepo) {
+				reposObject.callingCollaborators(currentRepo);
+			})
 		});
 	}
 
-	reposObject.callingCollaborators = function(name) {
-		$.ajax({
-			url: 'https://api.github.com/repos/Tenlia/' + name + '/collaborators',
-			type: 'GET',
-			headers: {
-				'Authorization': 'token ' + token,
-			},
-			success: function(collabData, message, xhr) {
-				// console.log(name);
-				// console.log(collabData);
-
-			}
-		});
-	}
-
-	$.ajax({
-		url: 'https://api.github.com/repos/Tenlia/learning_journal/contents/',
-		type: 'GET',
-		headers: {
-			'Authorization': 'token ' + token,
-		},
-		success: function(entryData, message, xhr) {
-			// console.log(entryData);
-			entryData.forEach(function(current) {
-				$.ajax({
-					url: current.url,
-					type: 'GET',
-					headers: {
-						'Accept': 'application/vnd.github.v3.raw',
-						'Authorization': 'token ' + token,
-					},
-					success: function(urldata, message, xhr) {
-						// console.log(urldata);
-					}
-				})
+	reposObject.callingCollaborators = function(currentRepo) {
+		$.get('/github/repos/tenlia/' + currentRepo.name + '/collaborators')
+		.done(function(collabData, message, xhr) {
+			// console.log(collabData);
+			repoAuthors = [];
+			collabData.forEach(function(currentAuthor) {
+				repoAuthors.push(currentAuthor.login);
 			});
-		}
-	});
-
-	reposObject.callingRepos();
+			(reposObject.myRepos).push({
+				title: currentRepo.name,
+				authors: repoAuthors,
+				url: currentRepo.url,
+				pubDate: currentRepo.created_at,
+				lastUpdate: currentRepo.updated_at
+			});
+			// console.log(reposObject.myRepos);
+		});
+	}
 
 	module.reposObject = reposObject;
 })(window);
