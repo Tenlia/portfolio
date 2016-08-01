@@ -12,13 +12,13 @@
 			.map(function(currentRepo) {
 				reposObject.callingCollaborators(currentRepo);
 			})
+			nextfunction(reposObject.myRepos);
 		});
 	}
 
 	reposObject.callingCollaborators = function(currentRepo) {
 		$.get('/github/repos/tenlia/' + currentRepo.name + '/collaborators')
 		.done(function(collabData, message, xhr) {
-			// console.log(collabData);
 			repoAuthors = [];
 			collabData.forEach(function(currentAuthor) {
 				repoAuthors.push(currentAuthor.login);
@@ -30,7 +30,7 @@
 				pubDate: currentRepo.created_at,
 				lastUpdate: currentRepo.updated_at
 			});
-			// console.log(reposObject.myRepos);
+			console.log(reposObject.myRepos);
 		});
 	}
 

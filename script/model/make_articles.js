@@ -4,9 +4,7 @@
   Entry.allEntries = [];
 
   function Entry(input) {
-    for(var keys in input) {
-      this[keys] = input[keys];
-    }
+    for(var keys in input) this[keys] = input[keys];
     console.log(Entry);
   };
 
@@ -15,12 +13,11 @@
       Entry.processArticles(JSON.parse(localStorage.storedArticles));
       articlesRender.render();
     } else {
-      reposObject.callingRepos();
-      console.log(reposObject.myRepos);
-      Entry.processArticles(JSON.parse(reposObject.myRepos));
-      console.log('pulled repos');
+      reposObject.callingRepos(Entry.processArticles);
       // localStorage.storedArticles = JSON.stringify(reposObject.myRepos);
       articlesRender.render();
+      console.log(reposObject.myRepos);
+      console.log('pulled repos');
     }
   };
 
