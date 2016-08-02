@@ -1,4 +1,4 @@
-// about-me function
+
 (function(module) {
 	var aboutmeController = {};
 

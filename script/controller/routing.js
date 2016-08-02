@@ -1,4 +1,4 @@
-// page() routes file
+
 page();
 page('/', articles);
 page('/aboutme', aboutme);
