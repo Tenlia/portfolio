@@ -1,4 +1,4 @@
-// home/articles file
+
 (function(module) {
 	var homeController = {};
 

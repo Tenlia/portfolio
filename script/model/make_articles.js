@@ -4,9 +4,8 @@
   Entry.allEntries = [];
 
   function Entry(input) {
-    for(var keys in input) {
-      this[keys] = input[keys];
-    }
+    for(var keys in input) this[keys] = input[keys];
+    console.log(Entry);
   };
 
   Entry.pullArticles = function() {
@@ -14,11 +13,10 @@
       Entry.processArticles(JSON.parse(localStorage.storedArticles));
       articlesRender.render();
     } else {
-      $.getJSON('data/articles.json', function(articleContent) {
-        Entry.processArticles(articleContent);
-        localStorage.storedArticles = JSON.stringify(articleContent);
-        articlesRender.render();
-      });
+      // localStorage.storedArticles = JSON.stringify(reposObject.myRepos);
+      articlesRender.render();
+      console.log(reposObject.myRepos);
+      console.log('pulled repos');
     }
   };
 
@@ -44,6 +42,7 @@
     });
     return Entry.allEntries;
   };
+
 
   module.Entry = Entry;
 

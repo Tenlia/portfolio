@@ -6,6 +6,7 @@
 
   viewSorting.filterAuthorEntries = function() {
     viewSorting.filteredAuthors = Entry.allEntries.map(function(entry) {
+      console.log(entry.authors);
       return eval(entry.authors);
     })
     .reduce(function(fullArray, currentArray) {

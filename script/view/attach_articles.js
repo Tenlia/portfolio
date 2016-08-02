@@ -6,7 +6,11 @@ articlesRender.render = function() {
   	});
 };
 
-Entry.pullArticles();
+
+function pullAndMakeArticles(){
+	reposObject.callingRepos(Entry.processArticles);
+	Entry.pullArticles();
+};
 
 viewSorting.makeAuthorOptionTags(viewSorting.filterAuthorEntries());
 viewSorting.selectAuthor();
