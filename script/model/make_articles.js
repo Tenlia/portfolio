@@ -13,7 +13,6 @@
       Entry.processArticles(JSON.parse(localStorage.storedArticles));
       articlesRender.render();
     } else {
-      reposObject.callingRepos(Entry.processArticles);
       // localStorage.storedArticles = JSON.stringify(reposObject.myRepos);
       articlesRender.render();
       console.log(reposObject.myRepos);
@@ -43,6 +42,7 @@
     });
     return Entry.allEntries;
   };
+
 
   module.Entry = Entry;
 
